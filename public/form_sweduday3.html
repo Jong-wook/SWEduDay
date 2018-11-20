@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-
+		
 		<title>[소프트웨어 교육 DAY] '종이로봇코딩' 체험교육 신청</title>
-
+		
 		<link href="./semantic.min.css" rel="stylesheet" >
 
 		<style>
@@ -14,19 +14,19 @@
 				margin:0;
 				box-sizing:border-box;
 			}
-
+			
 			html {
 				width:100%;
 				height:100%;
 			}
-
+			
 			body {
 				width:100%;
 				height:100%;
 				color: #000;
 				background-color: #fff;
 			}
-
+					
 			.container {
 				width:100%;
 				height:100%;
@@ -43,40 +43,40 @@
 			#iconImage {
 				display:inline;
 			}
-
+			
 			#titleText {
 				font-size:1.4em;
 				font-weight:bold;
 				color:#888;
 			}
-
+			
 			#contentsText {
 				color:#999;
 			}
-
+			
 			#form1 {
 				padding:1em;
 			}
-
+			
 			.row {
 				height:3em;
 			}
-
+			
 			.col1 {
 				width:18em;
 			}
-
+			 
 			.inputbox {
 				width:20em;
 			}
-
+			
 			#buttonContainer {
 				padding-top:0.6em;
 				text-align:right;
 			}
-
+			
 		</style>
-
+		
 		<script src="./jquery-3.1.1.min.js"></script>
 		<script src="./semantic.min.js"></script>
 		<script>
@@ -84,34 +84,30 @@
 				$('.ui.checkbox').checkbox();
 			});
 		</script>
-
-
+		
+		
 	</head>
 	<body>
 
 		<div class="container">
-
+			
 			<div id="cardbox" class="ui blue fluid card">
 				 <div class="content">
 					<div>
 						<div id="titleText" class="header">신청자 정보입력</div>
 	   					<div id="contentsText" class="description">
-<br>
-							 <b> 신청 후에는 수정 및 취소가 되지 않습니다. 신청 전 정보를 확인해주세요.</b>
-							 <b><br><br> 2018년 12월 15일 (토) 10시~13시 서울교육대학교 전산관 </b>
-							 <b><br> 초등3~6학년 (참가비:무료) -  점심 미제공/ 주차장 미제공 </b>
-
+					       	반드시 유의사항을 읽고,  신청해주세요.
 					    </div>
 					</div>
 				 </div>
-
+			
 				<form id="form1" method="post" action="/process/application">
 					<table>
 						<tr class="row">
 							<td class="col1"><label id="contentsText">학생이름</label></td>
 							<td class="col2" colspan="2">
 								<div class="ui input">
-									<input class="inputbox" style='width:70px;height:20px;' type="text" name="name" required/>
+									<input class="inputbox" type="text" name="name" />
 								</div>
 							</td>
 							<td></td>
@@ -120,10 +116,7 @@
 							<td class="col1"><label id="contentsText">보호자 휴대전화번호</label></td>
 							<td class="col2" colspan="2">
 								<div class="ui input">
-									<input class="inputbox" style='width:90px;height:20px;'type="text" maxlength="11" name="phone" required>
-									* <font color="gray">하이픈(-)은 제외하고 숫자만 입력해주세요. </font>
-
-
+									<input  type="tel" name="phone" maxlength="11"/>
 								</div>
 							</td>
 							<td></td>
@@ -132,9 +125,8 @@
 							<td class="col1"><label id="contentsText">소속 초등학교</label></td>
                                                         <td class="col2" colspan="2">
                                                                 <div class="ui input">
-									<input class="inputbox" style='width:70px;height:20px;' type="text" name="school" /required>
-										초등학교
-																																</div>
+                                                                        <input class="inputbox" type="text" name="school" />
+                                                                </div>
                                                         </td>
                                                         <td></td>
                                                 </tr>
@@ -142,11 +134,10 @@
                                                         <td class="col1"><label id="contentsText">학년</label></td>
                                                         <td class="col2" colspan="2">
                                                                 <div class="ui input">
-									<input type=radio name="grade" value="3" required> 3학년
-									<input type=radio name="grade" value="4"> 4학년
-									<input type=radio name="grade" value="5"> 5학년
-									<input type=radio name="grade" value="6"> 6학년
-
+									<input type="radio" name="grade" value="3" />3학년<br>
+									<input type="radio" name="grade" value="4" />4학년<br>
+									<input type="radio" name="grade" value="5" />5학년<br>
+									<input type="radio" name="grade" value="6" />6학년<br>
                                                                 </div>
                                                         </td>
                                                         <td></td>
@@ -155,11 +146,7 @@
                                                         <td class="col1"><label id="contentsText">이전의 프로그래밍 교육, 캠프, 피지컬 컴퓨팅 캠프 등 소프트웨어 교육 수강 경험횟수</label></td>
                                                         <td class="col2" colspan="2">
                                                                 <div class="ui input">
-									<input type=radio name="sw_edu_exp" value="0" required> 없음
-									<input type=radio name="sw_edu_exp" value="1"> 1-2회
-									<input type=radio name="sw_edu_exp" value="3"> 3-4회
-									<input type=radio name="sw_edu_exp" value="5"> 5회 이상
-
+                                                                        <input class="inputbox" type="number" name="sw_edu_exp" />
                                                                 </div>
                                                         </td>
                                                         <td></td>
@@ -168,20 +155,16 @@
                                                         <td class="col1"><label id="contentsText">이전의 스크래치, 엔트리 등 블록형 컴퓨터언어 학습 경험횟수</label></td>
                                                         <td class="col2" colspan="2">
                                                                 <div class="ui input">
-									<input type=radio name="coding_exp" value="0" required> 없음
-									<input type=radio name="coding_exp" value="1"> 1-2회
-									<input type=radio name="coding_exp" value="3"> 3-4회
-									<input type=radio name="coding_exp" value="5"> 5회 이상
-
+                                                                        <input class="inputbox" type="number" name="coding_exp" />
                                                                 </div>
                                                         </td>
                                                         <td></td>
                                                 </tr>
 						<tr class="row">
-                                                        <td class="col1"><label id="contentsText">신청 동기 (간단히 적어주세요)</label></td>
+                                                        <td class="col1"><label id="contentsText">신청 동기 (간단하게적허주세요)</label></td>
                                                         <td class="col2" colspan="2">
                                                                 <div class="ui input">
-                                                									<input class="inputbox" type="textarea" rows="2" cols="20" name="motivation" required/>
+                                                                        <input class="inputbox" type="text" name="motivation" />
                                                                 </div>
                                                         </td>
                                                         <td></td>
@@ -193,12 +176,12 @@
 							<td id="buttonContainer" align="right"><input id="submitButton" class="ui primary button" type="submit" value="교육 신청" name="" /></td>
 						</tr>
 					</table>
-
+					
 				</form>
-
+				 
 			</div>
-
+			
 		</div>
-
+			 
 	</body>
 </html>
